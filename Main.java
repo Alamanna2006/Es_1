@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import Gianni.MetodoSomma;
+import Gianni.Mezzanotte;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,6 +35,14 @@ public class Main {
         MetodoSomma ms= new MetodoSomma();
         int risultato= ms.somma(5, 10);
         System.out.println("Il risultato della somma di 5 e 10 è: " + risultato);
+
+
+        Mezzanotte mz= new Mezzanotte(null);
+        java.sql.Time ora= new java.sql.Time(System.currentTimeMillis());
+        java.sql.Time tempoMancante= mz.ToMezzanotte(ora);
+        System.out.println("Il tempo mancante alla mezzanotte è: " + tempoMancante);
+
+        scanner.close();
 
 
     }
